@@ -14,7 +14,7 @@ public class Personne {
 		this.adresse = adresse;
 	}
 
-//	GET & SET
+//	GETTERS & SETTERS
 	public String getNom() {
 		return nom;
 	}
@@ -42,8 +42,13 @@ public class Personne {
 //	METHODES
 	@Override
 	public String toString() {
-		return "Personne: \nNom = " + nom + "\nPrenom = " + prenom + "\nAdresse = " + adresse;
+		return "\nNom = " + nom + "\nPrenom = " + prenom + "\nAdresse = " + adresse;
 	}
+	
+	public void toUp() {
+		System.out.println("\nNom = " + nom.toUpperCase() + "\nPrenom = " + prenom);
+	}
+
 		
 	
 }
