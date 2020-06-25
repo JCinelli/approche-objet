@@ -8,8 +8,8 @@ public class TestPersonne {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		AdressePostale adrs1 = new AdressePostale(34, "Rue de Jupiter", "34000", "Montpellier \r");
-		AdressePostale adrs2 = new AdressePostale(125, "Boulevard de la chapelle", "06110", "Le Cannet \r");
+		AdressePostale adrs1 = new AdressePostale(34, "Rue de Jupiter", "34000", "Montpellier");
+		AdressePostale adrs2 = new AdressePostale(125, "Boulevard de la chapelle", "06110", "Le Cannet");
 		
 		Personne pers1 = new Personne("Salami", "Jean", adrs1);
 		Personne pers2 = new Personne("Bros", "Mario", adrs2);
