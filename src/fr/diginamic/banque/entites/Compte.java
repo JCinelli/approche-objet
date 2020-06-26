@@ -32,6 +32,5 @@ public class Compte {
 	public String toString() {
 		return "Numéro de compte = " + numCompte + "\rSolde du compte = " + soldeCompte;
 	}
-	
 
 }
