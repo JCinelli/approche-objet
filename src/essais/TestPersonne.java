@@ -21,7 +21,7 @@ public class TestPersonne {
 		
 		System.out.println("______________________________________________\r");
 		System.out.println("Personne 1, nom en MAJ --> ");
-		pers1.toUp();
+		System.out.println(pers1.nomToUp());
 		
 		pers1.setNom("Sardine");
 		pers1.setPrenom("Pascal");

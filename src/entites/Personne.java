@@ -45,8 +45,8 @@ public class Personne {
 		return "\nNom = " + nom + "\nPrenom = " + prenom + "\nAdresse = " + adresse;
 	}
 	
-	public void toUp() {
-		System.out.println("\nNom = " + nom.toUpperCase() + "\nPrenom = " + prenom);
+	public String nomToUp() {
+		return "\nNom = " + nom.toUpperCase() + "\nPrenom = " + prenom;
 	}
 
 		
