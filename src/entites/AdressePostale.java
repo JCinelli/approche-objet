@@ -2,10 +2,10 @@ package entites;
 
 public class AdressePostale {
 
-	int numRue;
-	String libelRue;
-	String codePostal;
-	String ville;
+	private int numRue;
+	private String libelRue;
+	private String codePostal;
+	private String ville;
 	
 //	CONSTRUCTOR
 	public AdressePostale(int numRue, String libelRue, String codePostal, String ville) {
@@ -15,8 +15,15 @@ public class AdressePostale {
 		this.codePostal = codePostal;
 		this.ville = ville;
 	}
+	
+	
+//	METHODS
+	@Override
+	public String toString() {
+		return  numRue + " " + libelRue + " , " + codePostal + " , " + ville;
+	}
 
-//	GETTER and SETTER
+//	GETTERS and SETTERS
 	public int getNumRue() {
 		return numRue;
 	}
@@ -48,15 +55,5 @@ public class AdressePostale {
 	public void setVille(String ville) {
 		this.ville = ville;
 	}
-	
-	
-//	Méthodes
-	@Override
-	public String toString() {
-		return  numRue + " " + libelRue + " , " + codePostal + " , " + ville;
-	}
-	
-	
-	
 	
 }

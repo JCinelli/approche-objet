@@ -2,9 +2,9 @@ package entites;
 
 public class Personne {
 
-	String nom;
-	String prenom;
-	AdressePostale adresse;
+	private String nom;
+	private String prenom;
+	private AdressePostale adresse;
 	
 //	CONSTRUCTOR
 	public Personne(String nom, String prenom, AdressePostale adresse) {
@@ -13,6 +13,18 @@ public class Personne {
 		this.prenom = prenom;
 		this.adresse = adresse;
 	}
+	
+	
+//	METHODES
+	@Override
+	public String toString() {
+		return "Nom = " + nom + ", Prénom = " + prenom + ", Adresse = " + adresse;
+	}
+	
+	public String nomToUp() {
+		return "\nNom = " + nom.toUpperCase() + "\nPrenom = " + prenom;
+	}
+
 
 //	GETTERS & SETTERS
 	public String getNom() {
@@ -38,17 +50,5 @@ public class Personne {
 	public void setAdresse(AdressePostale adresse) {
 		this.adresse = adresse;
 	}
-
-//	METHODES
-	@Override
-	public String toString() {
-		return "\nNom = " + nom + "\nPrenom = " + prenom + "\nAdresse = " + adresse;
-	}
-	
-	public String nomToUp() {
-		return "\nNom = " + nom.toUpperCase() + "\nPrenom = " + prenom;
-	}
-
-		
 	
 }
