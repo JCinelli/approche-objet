@@ -14,8 +14,6 @@ public class Expression {
 	}
 
 //	METHODS
-	
-	
 	public static boolean isANumber(String chaine) {
 		try {
 			Integer.parseInt(chaine);
@@ -61,6 +59,11 @@ public class Expression {
 			return nb1 / nb2;
 		}
 	}
+	
+	@Override
+	public String toString() {
+		return "Expression --> " + membreGauche + " " + operateur + " "	+ membreDroite;
+	}
 
 //	GETTERS & SETTERS
 	/**
@@ -103,11 +106,5 @@ public class Expression {
 	 */
 	public void setMembreDroite(String membreDroite) {
 		this.membreDroite = membreDroite;
-	}
-
-	@Override
-	public String toString() {
-		return "Expression [membreGauche=" + membreGauche + ", operateur=" + operateur + ", membreDroite="
-				+ membreDroite + "]";
 	}
 }
