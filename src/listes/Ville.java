@@ -18,6 +18,7 @@ public class Ville {
 		return "Nom --> " + nom + " | Nombre d'habitants --> " + nbHab;
 	}
 
+
 //	GETTERS & SETTERS
 	/**
 	 * @return the nom

@@ -1,6 +1,7 @@
 package listes;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class TestListeString {
@@ -37,10 +38,14 @@ public class TestListeString {
 		System.out.println(listStr);
 		
 		System.out.println("\r_____________________Suppression des villes qui commencent par N______________________________\r");
-		for (int i = 0; i < listStr.size(); i++) {
-			if (listStr.get(i).charAt(0) == 'N') {
-				listStr.remove(i);
+		Iterator<String> iterator = listStr.iterator(); 
+		
+		while (iterator.hasNext()) {
+			String str = iterator.next();
+			if (str.charAt(0) == 'N') {
+				iterator.remove();
 			}
+			
 		}
 		
 		System.out.println(listStr);
