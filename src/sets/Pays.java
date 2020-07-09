@@ -1,5 +1,7 @@
 package sets;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+
 public class Pays {
 
 	private String nom;
@@ -21,6 +23,27 @@ public class Pays {
 				+ "\r Nom : " + nom 
 				+ "\r Nombre d'habitants : " + nbHabitant 
 				+ "\r PIB parhabitant : " + pibParHabitant;
+	}
+	
+	@Override
+	public boolean equals(Object object) {
+		
+//		Si l'objet en param n'est pas une instance de pays
+		if (!(object instanceof Pays)) {
+//			Pas d'égalité possible donc false
+			return false;
+			
+		}
+		
+//		Cast de l'objet en parm en un objet pays
+		Pays paysDeTestEgalite = (Pays)object;
+		
+//		Retourne le resultat de la vérification de chaque attributs des deux objet Pays
+		return new EqualsBuilder().append(nom, paysDeTestEgalite.getNom())
+								  .append(nbHabitant, paysDeTestEgalite.getNbHabitant())
+								  .append(pibParHabitant, paysDeTestEgalite.getPibParHabitant())
+								  .isEquals();
+		
 	}
 
 //	GETTERS & SETTERS	

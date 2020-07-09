@@ -1,6 +1,5 @@
 package sets;
 
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
 
@@ -101,6 +100,26 @@ public class TestSetObject {
 			System.out.println(pays + "\r");
 		}
 		
+		
+		System.out.println("\r_________________Test de la redefinition de la methode equals()____________________\r");
+		
+		Pays usa1 = new Pays("USA", 328_200_000, 62794.59);
+		Pays usa2 = new Pays("USA", 328_200_000, 62794.59);
+		
+		System.out.println("Test de l'égalité avec equals() --> " + usa1.equals(usa2));
+
+		System.out.print("Test de l'égalité avec == --> ");
+		System.out.println(usa1 == usa2);
+		
+		usa2.setNbHabitant(328);
+		
+		System.out.println("Test de l'égalité avec equals() en changeant la valeur d'un attribut -->" + usa1.equals(usa2));
+		
+		System.out.print("Test de l'égalité avec == en changeant la valeur d'un attribut --> ");
+		System.out.println(usa1 == usa2);
+		
+//		Pour que le == fonctionne il faut que usa1 et usa2 aient la meme signature memoire
+//		Exemple : Pays usa2 = usa1;
 		
 	}
 
